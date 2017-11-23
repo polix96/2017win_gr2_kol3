@@ -3,7 +3,8 @@
 ##The program should:
 # - print out current orientation
 # - applied tilt correction
-# - run in infinite loop
+# - run in infinite loop2
+
 # - until user breaks the loop
 # Assume that plane orientation in every new simulation step is random angle with gaussian distribution (the planes is experiencing "turbulations").
 # With every simulation step the orentation should be corrected, applied and printed out.
@@ -100,14 +101,12 @@ class Weather:
     def change_param(self, param, value):
         setattr(self, param, value)
 
-weather1 = Weather()
-weather1.change_param("rain", 'drizzle')
-test1 = Plane("Boeing", 35, weather1)
-test1.start_simulation()
-
-
-
-
 
 if __name__ == '__main__':
-    pass
+	weather1 = Weather()
+	weather1.change_param("rain", 'drizzle')
+	test1 = Plane("Boeing", 35, weather1)
+	test1.start_simulation()
+
+
+
